@@ -14,12 +14,12 @@ spec:
     spec:
       containers:
         - name: my-nodejs-container
-          image: nelsongeeko/suse-sita-school-demo:0.6
+          image: nelsongeeko/suse-sita-school-demo:0.7
           ports:
             - containerPort: 3000
           env:
             - name: IMAGE_SOURCE
-              value: "/images/illustrations/generic-classroom" # Set the image path here
+              value: "/images/illustrations/generic-classroom.jpg" # Set the image path here
 ---
 apiVersion: v1
 kind: Service
