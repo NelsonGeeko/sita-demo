@@ -19,7 +19,7 @@ spec:
             - containerPort: 3000
           env:
             - name: IMAGE_SOURCE
-              value: "/images/illustrations/suse.png" # Set the image path here
+              value: "/images/illustrations/generic-classrom.jpg" # Set the image path here
 ---
 apiVersion: v1
 kind: Service
