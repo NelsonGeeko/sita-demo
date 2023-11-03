@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const port = process.env.PORT || 3000; // Set a default port if not specified
-const imageSrc = process.env.IMAGE_SOURCE || '/images/illustrations/generic-classroom.jpg';
+const cssSrc = process.env.CSS_SOURCE || '/style.css';
 
 app.get('/', (req, res) => {
   res.send(`
@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="${cssSrc}">
     <script src="https://kit.fontawesome.com/0321996a56.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/0321996a56.js" crossorigin="anonymous"></script>

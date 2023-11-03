@@ -1,33 +1,33 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-nodejs-school
+  name: my-nodejs-humansettlements
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: my-nodejs-school
+      app: my-nodejs-humansettlements
   template:
     metadata:
       labels:
-        app: my-nodejs-school
+        app: my-nodejs-humansettlements
     spec:
       containers:
         - name: my-nodejs-container
-          image: nelsongeeko/suse-sita-school-demo:0.6
+          image: nelsongeeko/suse-sita-humansettlements:0.2
           ports:
             - containerPort: 3000
           env:
-            - name: IMAGE_SOURCE
-              value: "/images/illustrations/suse.png" # Set the image path here
+            - name: CSS_SOURCE
+              value: "style.css" # Set the image path here
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-nodejs-school-service
+  name: my-nodejs-humansettlements-service
 spec:
   selector:
-    app: my-nodejs-school
+    app: my-nodejs-humansettlements
   ports:
     - protocol: TCP
       port: 80
