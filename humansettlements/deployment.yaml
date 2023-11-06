@@ -19,7 +19,7 @@ spec:
             - containerPort: 3000
           env:
             - name: CSS_SOURCE
-              value: "style.css" # Set the image path here
+              value: "style2.css" # Set the image path here
 ---
 apiVersion: v1
 kind: Service
